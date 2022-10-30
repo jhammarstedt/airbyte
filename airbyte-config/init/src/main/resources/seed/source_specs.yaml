@@ -2426,6 +2426,24 @@
     supportsNormalization: false
     supportsDBT: false
     supported_destination_sync_modes: []
+- dockerImage: "airbyte/source-datascope:0.1.0"
+  spec:
+    documentationUrl: https://docsurl.com
+    connectionSpecification:
+      $schema: http://json-schema.org/draft-07/schema#
+      title: Datascope Spec
+      type: object
+      required:
+        - Authorization
+      additionalProperties: true
+      properties:
+        Authorization:
+          type: string
+          description: API Key
+          airbyte_secret: true
+        supportsNormalization: false
+        supportsDBT: false
+        supported_destination_sync_modes: []
 - dockerImage: "airbyte/source-delighted:0.1.4"
   spec:
     documentationUrl: "https://docsurl.com"
